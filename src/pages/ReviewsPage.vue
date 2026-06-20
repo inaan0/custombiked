@@ -44,9 +44,7 @@ function resetReview() {
   reviewSent.value = false
 }
 
-function stars(n: number) {
-  return '★'.repeat(n) + '☆'.repeat(5 - n)
-}
+
 </script>
 
 <template>
