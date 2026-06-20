@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cb-bg text-cb-ink antialiased;
+    font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  }
+  ::selection {
+    background: #1e2a37;
+    color: #f6f4f0;
+  }
+}
+
+@layer components {
+  .btn-accent {
+    @apply inline-flex items-center gap-2 bg-cb-accent text-white rounded-full px-6 py-3 font-semibold cursor-pointer transition-colors hover:bg-cb-accent-deep;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 bg-transparent text-cb-ink border border-cb-linen rounded-full px-6 py-3 font-semibold cursor-pointer transition-colors hover:border-cb-ink;
+  }
+  .btn-panel {
+    @apply inline-flex items-center gap-2 bg-cb-panel text-cb-bg rounded-full px-6 py-3 font-semibold cursor-pointer transition-opacity hover:opacity-90;
+  }
+  .cb-card {
+    @apply bg-white border border-cb-border rounded-[18px];
+  }
+  .cb-label {
+    @apply text-[13px] font-semibold tracking-[0.14em] uppercase text-cb-accent-deep;
+  }
+  .cb-diamond {
+    @apply w-[10px] h-[10px] bg-cb-accent rotate-45 rounded-sm flex-none;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
